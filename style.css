@@ -9,13 +9,15 @@
 }
 
 body {
-    background-color:  #222327;
+    background-color: #222327;
     height: 100vh;
 }
 
 #mobile-nav {
     display: none;
 }
+
+/* Desktop Navbar Section */
 
 .nav-bar {
     position: absolute;
@@ -80,8 +82,89 @@ li a::after {
     transition: all 250ms ease-in-out;
 }
 
-li a:hover::before, li a:hover::after {
+li a:hover::before,
+li a:hover::after {
     width: 100%;
     left: 0;
 }
 
+/* End of Desktop Navbar Section */
+
+/* Hero Section */
+
+.container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.image-container {
+    position: relative;
+    background-image: url(./Assets/pexels-huy-phan-1391293.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 0vh;
+    animation: scale 15s;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.hero-text {
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    font-size: 25px;
+    color: aliceblue;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.freelance {
+    color: rgb(255, 177, 83);
+}
+
+.developer {}
+
+.cv-cta {
+    border: 2px solid aliceblue;
+    width: 135px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.cv-text {
+    color: aliceblue;
+}
+
+.cv-cta:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+    transition: all 0.3s ease 0s;
+}
+
+/* End of Hero Section */
